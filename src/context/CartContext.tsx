@@ -1,5 +1,5 @@
 import { createContext, useContext, useState, ReactNode } from "react";
-import { Product, CartItem } from "../types";
+import type { Product, CartItem } from "../types";
 
 interface CartContextType {
   // TODO: Define el tipo del contexto
@@ -13,7 +13,12 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
   const addToCart = (product: Product) => {
     // TODO: Implementar lógica
     // 1. Verificar si el producto ya está en el carrito
+    const productExist = cart.filter(p => p.producto.id === product.id);
+    
     // 2. Si está, incrementar quantity
+    if (productExist.length != 0) {
+      
+    }
     // 3. Si no está, añadirlo con quantity: 1
     console.log("Añadir al carrito:", product);
   };
@@ -27,6 +32,7 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
 
   return (
     // TODO: Proveer el contexto con los valores necesarios
+    <></>
   );
 };
 

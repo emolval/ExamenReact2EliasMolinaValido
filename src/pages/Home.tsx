@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import ProductCard from "../components/ProductCard";
-import { getProducts } from "../services/productService";
-import { Product } from "../types";
+// import ProductCard from "../components/ProductCard";
+// import { getProducts } from "../services/productService";
+import type { Product } from "../types";
 // import { useCart } from "../context/CartContext";
 
 export default function Home() {
