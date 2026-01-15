@@ -2,7 +2,7 @@
 // import Navbar from "./components/Navbar";
 // import Home from "./pages/Home";
 // import Cart from "./pages/Cart";
-// import { CartProvider } from "./context/CartContext";
+import { CartProvider } from "./context/CartContext";
 
 function App() {
   return (
@@ -10,9 +10,9 @@ function App() {
     // 1. Envolver con CartProvider
     // 2. Configurar BrowserRouter y Routes
     // 3. Añadir Navbar
-    <div>
-      <h1>Configura las Rutas en App.tsx</h1>
-    </div>
+    <CartProvider>
+      <Router />
+    </CartProvider>
   );
 }
 

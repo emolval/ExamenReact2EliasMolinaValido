@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 // import { useCart } from "../context/CartContext";
 
 export default function Navbar() {
@@ -8,10 +8,13 @@ export default function Navbar() {
   return (
     <nav>
       {/* TODO: Enlace a la página principal con el texto 'TechStore 🛒' */}
+      <Link to="/home">Home</Link>
+      <Link to="/cart">Cart</Link>
       <div>
         {/* Enlace al carrito con el texto 'Carrito <span>Aquí poner el número de productos en el carrito</span>'  */}
         
       </div>
+      <Outlet />
     </nav>
   );
 }
